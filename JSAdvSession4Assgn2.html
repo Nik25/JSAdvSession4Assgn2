@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSadv-Session4-Assignment2</title>
+</head>
+<body>
+	<script>
+		function person() {
+			this.designation = "Teacher"
+		}
+		function student() {
+			this.n = "Bart";
+		}
+		//student.prototype = Object.create(person.prototype);
+		student.prototype = new person();
+		var ins = new student();
+		alert(ins.designation);	
+		alert(ins.n);
+		ins.designation = "Assistant";
+		alert(ins.designation);
+	</script>
+</body>
+</html>
